@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="icon" href="betesda.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIDEOS Y CANCIONES FAVORITAS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Big Shoulders Stencil", sans-serif;
+      color: black;
+    }
+
+    nav {
+      background-color: #810303;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav .titulo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav .menu a:hover {
+      color: chartreuse;
+    }
+
+    main {
+      display: flex;
+      min-height: 800px;
+    }
+
+    aside {
+      background-color: rgb(255, 0, 0);
+      width: 20%;
+      padding: 20px;
+    }
+
+    aside h3 {
+      color: white;
+      margin-top: 20px;
+    }
+
+    aside ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    aside li {
+      margin-bottom: 10px;
+    }
+
+    aside a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    aside a:hover {
+      color: black;
+    }
+
+    section {
+      background-color: black;
+      width: 80%;
+      padding: 20px;
+    }
+
+    section h1 {
+      color: red;
+    }
+
+    section h2 {
+      color: white;
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 1000px;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #810303;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="titulo">VIDEOS Y CANCIONES FAVORITAS</div>
+    <div class="menu">
+      <a href="index.html">Inicio</a>
+      
+    </div>
+  </nav>
+
+  <main>
+    <aside>
+      <h3>🎮 Top 6 Lista de Peliculas y Series</h3>
+      <ul>
+        <li><a onclick="cambiarVideo('3NUizzImhig', 'ONE PIECE')">1. ONE PIECE</a></li>
+        <li><a onclick="cambiarVideo('fXDWcRNet6E', 'Shangri-la Frontier')">2. Shangri-la Frontier</a></li>
+        <li><a onclick="cambiarVideo('yMEDiKD7cyE', 'Son como niños')">3. Son como niños</a></li>
+        <li><a onclick="cambiarVideo('9fbo_pQvU7M', 'ted')">4. ted</a></li>
+        <li><a onclick="cambiarVideo('Y7d0A5re7-0', 'Vikings Trailer')">5. Vikings Trailer</a></li>
+        <li><a onclick="cambiarVideo('h6aVWMb3J5M', 'STARWARS')">6. STARWARS</a></li>
+      </ul>
+     
+      <h3>🎵top 6 Lista de Canciones</h3>
+      <ul>
+        <li><a onclick="cambiarVideo('H4iRvuv4jBY', 'Diamante - NISSA')">1. Diamante - NISSA</a></li>
+        <li><a onclick="cambiarVideo('lr4r1aT5M2Y', 'Prime - NISSA')">2. Prime - NISSA</a></li>
+        <li><a onclick="cambiarVideo('7_7Bx7i1WpI', 'Campeón - NISSA')">3. Campeón - NISSA</a></li>
+        <li><a onclick="cambiarVideo('k_pi8CJfk8o', 'Invicto - NISSA')">4. Invicto - NISSA</a></li>
+        <li><a onclick="cambiarVideo('qb3wVNY4Crs', 'Vine por todo - NISSA')">5. Vine por todo - NISSA</a></li>
+        <li><a onclick="cambiarVideo('k7X-VBych2E', 'Fe - NISSA')">6. Fe - NISSA</a></li>
+      </ul>
+
+      <h3>🕹️ Top 6 Videojuegos Favoritos </h3>
+      <ul>
+        <li><a onclick="cambiarVideo('JSRtYpNRoN0', 'Skyrim')">1. Skyrim</a></li>
+        <li><a onclick="cambiarVideo('MmB9b5njVbA', 'Minecraft')">2. Minecraft</a></li>
+        <li><a onclick="cambiarVideo('FW9vsrPWujI', 'ARK')">3. ARK</a></li>
+        <li><a onclick="cambiarVideo('kJDYCVV-oA0', 'Far Cry 4')">4. Far Cry 4</a></li>
+        <li><a onclick="cambiarVideo('QkkoHAzjnUs', 'GTA V')">5. GTA V</a></li>
+        <li><a onclick="cambiarVideo('hh9x4NqW0Dw', 'Whats God 2')">6. Whats God 2</a></li>
+      </ul>
+    </aside>
+
+    <section>
+      <h1>Reproduciendo</h1>
+      <h2 id="tituloActual">Diamante - NISSA</h2>
+      <iframe id="videoFrame"
+              src="https://www.youtube.com/embed/H4iRvuv4jBY"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+      </iframe>
+    </section>
+  </main>
+
+  <footer>© 2025 LA PÁGINA DE VARAS</footer>
+
+  <script>
+    function cambiarVideo(videoID, titulo) {
+      const iframe = document.getElementById("videoFrame");
+      iframe.src = `https://www.youtube.com/embed/${videoID}`;
+      document.getElementById("tituloActual").textContent = titulo;
+    }
+  </script>
+</body>
+</html>

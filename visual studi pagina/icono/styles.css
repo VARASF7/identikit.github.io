@@ -1,0 +1,35 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("Imagenes/fondo2.jpg");
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .cajageneral {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .CAJA1, .CAJA2, .CAJA3 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .CAJA4
+  {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+margin-left: 500px;
+margin-top: 50px;
+}
+   

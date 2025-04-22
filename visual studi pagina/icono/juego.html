@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LA PÁGINA DE VARAS</title>
+  <link rel="icon" href="betesda.ico">
+  <style>
+    body {
+      font-family: "Big Shoulders Stencil";
+      background-color: rgb(128, 10, 10);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 50px;
+      position: relative;
+    }
+
+    .pregunta {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .opciones button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #444;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .opciones button:hover {
+      background-color: #666;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    
+    .boton-inicio {
+      font-family: "Big Shoulders Stencil";
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgb(128, 10, 10);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .boton-inicio:hover {
+      background-color: #666;
+    }
+
+    #imagen {
+      text-align: center;
+      margin: 2px;
+      height: 50px;
+      width: auto;
+
+    }
+  </style>
+</head>
+<body>
+
+
+  <a href="index.html" class="boton-inicio">INICIO</a>
+
+  <h1> Juego de Preguntas de Básquet</h1>
+  <img  id="imagen" src="5d5c3dad3d3a3422614a376a55c07624.png" alt="png">
+  
+  <div class="pregunta" id="pregunta"></div>
+  <div class="opciones" id="opciones"></div>
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    const preguntas = [
+      {
+        texto: "¿Cuántos jugadores tiene un equipo de básquet en la cancha?",
+        opciones: ["4", "5", "6", "7"],
+        respuesta: "5"
+      },
+      {
+        texto: "¿Cuánto vale un triple en básquet?",
+        opciones: ["1 punto", "2 puntos", "3 puntos", "4 puntos"],
+        respuesta: "3 puntos"
+      },
+      {
+        texto: "¿Quién es considerado el mejor jugador de la historia?",
+        opciones: ["Kobe Bryant", "LeBron James", "Michael Jordan", "Stephen Curry"],
+        respuesta: "Michael Jordan"
+      }
+    ];
+
+    let preguntaActual = 0;
+
+    function mostrarPregunta() {
+      const p = preguntas[preguntaActual];
+      document.getElementById("pregunta").innerText = p.texto;
+      const opcionesDiv = document.getElementById("opciones");
+      opcionesDiv.innerHTML = "";
+      p.opciones.forEach(op => {
+        const boton = document.createElement("button");
+        boton.innerText = op;
+        boton.onclick = () => verificarRespuesta(op);
+        opcionesDiv.appendChild(boton);
+      });
+    }
+
+    function verificarRespuesta(opcionElegida) {
+      const resultadoDiv = document.getElementById("resultado");
+      if (opcionElegida === preguntas[preguntaActual].respuesta) {
+        resultadoDiv.innerText = "CORRECTO";
+      } else {
+        resultadoDiv.innerText = "INCORRECTO. La respuesta era: " + preguntas[preguntaActual].respuesta;
+      
+      }
+
+      setTimeout(() => {
+        resultadoDiv.innerText = "";
+        preguntaActual++;
+        if (preguntaActual < preguntas.length) {
+          mostrarPregunta();
+        } else {
+          document.getElementById("pregunta").innerText = " ¡Terminaste!";
+          document.getElementById("opciones").innerHTML = "";
+        }
+      }, 2000);
+    }
+
+    mostrarPregunta();
+  </script>
+
+  <footer>© 2025 LA PÁGINA DE VARAS</footer>
+
+</body>
+</html>
