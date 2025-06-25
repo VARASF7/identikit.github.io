@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EL BLOG DE VARAS / DLC</title>
+  <link rel="icon" href="imagenes tp2/betesda.ico" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Big Shoulders Stencil", sans-serif;
+      background-image: url("ChatGPT Image 28 may 2025, 17_00_30.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    nav {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav .titulo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+    .titulo-principal {
+      text-align: center;
+      color: rgb(0, 0, 0);
+      font-size: 32px;
+      margin-top: 20px;
+    }
+
+    .CAJA2 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 35px;
+      border-radius: 50px;
+      width: 80%;
+      max-width: 900px;
+      font-weight: bold;
+      text-align: justify;
+      margin: 30px auto;
+      display: none;
+    }
+
+    .mostrar {
+      display: block !important;
+      animation: entrada 0.5s ease-out;
+    }
+
+    @keyframes entrada {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .botones {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .botones img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .botones img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px white;
+    }
+
+    img.dlc-portada {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="titulo">EL BLOG DE VARAS / DLC</div>
+    <div class="menu">
+      <a href="index3.html">INICIO</a>
+    </div>
+  </nav>
+
+  <h1 class="titulo-principal">The Elder Scrolls V: Skyrim</h1>
+
+  <div class="botones">
+    <img src="Imagenes/Dawnguard_1080x1500.webp" alt="Dawnguard" onclick="mostrarDLC('dawnguard')" width="100"/>
+    <img src="Imagenes/Hearthfire_1080x1500.webp" alt="Hearthfire" onclick="mostrarDLC('hearthfire')" />
+    <img src="Imagenes/Dragonborn_1080x1500.webp" alt="Dragonborn" onclick="mostrarDLC('dragonborn')" />
+  </div>
+
+  <div id="dawnguard" class="CAJA2">
+    <img src="imagenes tp2/dawnguard.jpg" alt="Dawnguard" class="dlc-portada" />
+    <p><strong>DAWNGUARD — El sol se apaga: la era de los vampiros</strong></p>
+    <p>En los márgenes helados de Skyrim, una amenaza antigua despierta. Los <strong>Volkihar</strong>, una poderosa y reclusa familia de vampiros puros, resurgen bajo el liderazgo de <strong>Lord Harkon</strong>, un noble maldito que ha vivido siglos buscando una única meta: romper el ciclo del sol y la luna. Harkon cree en una profecía: si reúne tres <strong>Pergaminos Antiguos</strong>, podrá usar el poder del cielo para apagar el sol... para siempre.</p>
+    <p>Pero su plan no es tan sencillo. En medio de esa oscuridad se alza una nueva versión de la legendaria <strong>Guardia del Alba</strong>, una orden de cazadores de vampiros que había desaparecido hace generaciones. Liderada por <strong>Isran</strong>, un hombre endurecido por la pérdida y la traición, la Guardia resurge como última línea de defensa contra la noche eterna.</p>
+    <p>Todo se complica cuando aparece <strong>Serana</strong>, la hija de Harkon. Ella porta uno de los Pergaminos y se niega a seguir a su padre. Es un personaje profundo, complejo y trágico. La relación que desarrollás con ella —aliada, amiga, posible amor— es uno de los pilares emocionales del DLC.</p>
+    <p>Durante la historia, el Sangre de Dragón deberá decidir: ¿Aliarse con la Guardia del Alba para defender a la humanidad, o aceptar la oscuridad y convertirse en un <strong>Señor Vampiro</strong>, ganando acceso a un nuevo árbol de habilidades, poderes de niebla, invisibilidad, y control mental?</p>
+    <p>La historia incluye lugares memorables como el <strong>Castillo Volkihar</strong>, el <strong>Valle del Amanecer</strong>, portales interdimensionales, templos perdidos y nuevas criaturas como <strong>gárgolas vivientes</strong> y <strong>muertos eternos</strong>.</p>
+    <p>Este DLC no es solo una guerra de sangre, sino un conflicto de legado, lealtad y destino familiar.</p>
+  </div>
+
+  <div id="hearthfire" class="CAJA2">
+    <img src="imagenes tp2/hearthfire.jpg" alt="Hearthfire" class="dlc-portada" />
+    <p><strong>HEARTHFIRE — El otro Skyrim, el de los simples mortales</strong></p>
+    <p>No todo en Skyrim son espadas, dragones y guerras. En medio del caos, existe la oportunidad de vivir algo distinto: una vida.</p>
+    <p>Con Hearthfire, el Sangre de Dragón puede bajar la espada y levantar una casa. Literalmente. Comprás un terreno, construís desde los cimientos una <strong>mansión nórdica personalizada</strong>, y diseñás cada ala: una biblioteca, una armería, un jardín alquímico, o una torre para encantamientos.</p>
+    <p>Pero el verdadero núcleo del DLC no es la construcción, sino la <strong>familia</strong>. Podés adoptar huérfanos de ciudades destruidas por la guerra o los dragones, y darles un hogar. Verlos jugar, dormir, estudiar y hasta defenderse. Eso transforma completamente la relación del jugador con el mundo: <em>pasás de ser un viajero a ser parte del paisaje</em>.</p>
+    <p>Incluso podés contratar mayordomos, cocineros, bardos, y tener tu propio corral de animales. Aunque no tiene una historia principal como los otros DLC, Hearthfire aporta profundidad emocional y una pausa introspectiva. Te muestra que en Skyrim no todo es poder: a veces, el verdadero logro es crear algo que permanezca.</p>
+  </div>
+
+  <div id="dragonborn" class="CAJA2">
+    <img src="imagenes tp2/dragonborn.jpg" alt="Dragonborn" class="dlc-portada" />
+    <p><strong>DRAGONBORN — El primer eco, el verdadero rival</strong></p>
+    <p>Mucho antes de que tu personaje absorbiera su primer alma de dragón, hubo otro como vos. Uno más antiguo. Más sabio. Más ambicioso. Su nombre fue <strong>Miraak</strong>.</p>
+    <p>Este DLC arranca con fuerza: unos misteriosos cultistas te atacan al grito de “¡el verdadero Sangre de Dragón volverá!”. Investigás y descubrís que provienen de la isla volcánica de <strong>Solstheim</strong>, una región salvaje entre Skyrim y Morrowind. Una tierra con sus propias culturas: los <strong>Skaal</strong>, un pueblo nórdico aislado que venera la naturaleza, y los <strong>Dunmer</strong>, refugiados elfos oscuros que escaparon de la erupción del Red Mountain.</p>
+    <p>En Solstheim, la realidad está rota. Antiguos santuarios empiezan a reconstruirse por sí solos. Los pobladores caen en trance y trabajan sin descanso, como si una voluntad mayor los controlara. Esa voluntad es <strong>Hermaeus Mora</strong>, el príncipe Daédrico del conocimiento prohibido, quien opera desde su dimensión retorcida: <strong>Apocrypha</strong>, una biblioteca infinita llena de tentáculos, tinta viviente y bestias nacidas del saber.</p>
+    <p>Miraak, que fue alguna vez un Sangre de Dragón como vos, se dejó tentar por Mora. Usó su poder para esclavizar dragones, crear gritos propios, y escapar del ciclo de la muerte. Ahora quiere regresar al mundo físico y reclamar lo que considera suyo: el título de Dovahkiin.</p>
+    <p>Para detenerlo, tenés que explorar Apocrypha, descifrar sus libros vivientes, domar dragones, y enfrentarlo en una batalla final que no es solo física, sino espiritual. Es el único momento en el juego donde sentís que tu personaje encuentra a su verdadero espejo oscuro. Miraak no es un monstruo: es lo que podrías haber sido si hubieras elegido otro camino.</p>
+    <p>Este DLC es una mezcla perfecta de <em>aventura, horror cósmico, poder, historia antigua y combate épico</em>. Es, para muchos, el verdadero final de Skyrim.</p>
+  </div>
+  
+
+  <script>
+    function mostrarDLC(id) {
+      const dlcs = ['dawnguard', 'hearthfire', 'dragonborn'];
+      dlcs.forEach(dlc => {
+        const div = document.getElementById(dlc);
+        if (dlc === id) {
+          div.classList.add('mostrar');
+        } else {
+          div.classList.remove('mostrar');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

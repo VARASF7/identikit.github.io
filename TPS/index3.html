@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOG</title>
+  <link rel="icon" href="imagenes tp2/betesda.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Big Shoulders Stencil", sans-serif;
+      background-image: url("Imagenes/fondo2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      
+    }
+
+    nav {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav .titulo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+    .titulo-principal {
+      text-align: center;
+      color: rgb(0, 0, 0);
+      font-size: 32px;
+      margin-top: 20px;
+    }
+    .INTRO{
+      text-align: center;
+      color: #ffffff;
+      font-weight: bold;
+
+
+      
+    }
+
+    .imagenes, .iconos {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .imagenes img, .iconos img {
+      margin: 0 10px;
+      border-radius: 10px;
+    }
+
+    .cajageneral {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .CAJA1, .CAJA2, .CAJA3, .CAJA4 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 35px;
+      border-radius: 50px;
+      width: 400px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .contacto {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+  color: white;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.contacto button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contacto button:hover {
+  background-color: #666;
+}
+
+
+    .Final {
+      text-align: center;
+      color: #ffffff;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+  </style>
+
+</head>
+
+<body>
+  <nav>
+    <div class="titulo">EL BLOG DE VARAS</div>
+    <div class="menu">
+      <a href="index2.html">LINKTREE</a>
+    </div>
+  </nav>
+
+  <h1 class="titulo-principal">The Elder Scrolls V: Skyrim</h1>
+<h1 class="INTRO"> </h1>
+  <div class="cajageneral">
+  <div class="CAJA1">
+    <p style="color:rgb(255, 255, 255);">GÉNERO</p>
+    <p>RPG de mundo abierto, fantasía medieval</p>
+    <a href="genero.html">
+      <button style="padding: 10px 20px; border: none; border-radius: 10px; background-color: rgb(0, 0, 0); color: white; font-weight: bold; cursor: pointer;">
+        Ver más sobre el género
+      </button>
+    </a>
+  </div>
+
+  <div class="CAJA2">
+    <p style="color:rgb(255, 255, 255);">DLC</p>
+    <p>Dawnguard, Hearthfire, Dragonborn</p>
+    <a href="dlc.html">
+      <button style="padding: 10px 20px; border: none; border-radius: 10px; background-color: rgb(0, 0, 0); color: white; font-weight: bold; cursor: pointer;">
+        Ver los DLC
+      </button>
+    </a>
+  </div>
+
+  <div class="CAJA3">
+    <p style="color:rgb(255, 255, 255);">VERSIONES</p>
+    <p>Original, Legendary Edition, Special Edition, Anniversary Edition</p>
+    <a href="verciones.html">
+      <button style="padding: 10px 20px; border: none; border-radius: 10px; background-color: rgb(0, 0, 0); color: white; font-weight: bold; cursor: pointer;">
+        Ver versiones del juego
+      </button>
+    </a>
+  </div>
+
+  <div class="CAJA4">
+  <p style="color:rgb(255, 255, 255);">HISTORIA</p>
+  <p>El Sangre de Dragón debe detener el regreso de Alduin, el devorador de mundos, mientras Tamriel se encuentra dividido por una guerra civil entre el Imperio y los Capas de la Tormenta.</p>
+  <a href="historia.html">
+    <button style="padding: 10px 20px; border: none; border-radius: 10px; background-color: rgb(0, 0, 0); color: white; font-weight: bold; cursor: pointer;">
+      Ver historia completa
+    </button>
+  </a>
+</div>
+</div>
+<div class="contacto">
+  <h2>Contacto</h2>
+  <form action="mailto:tu-correo@example.com" method="post" enctype="text/plain">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="correo">Correo:</label><br>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+
+  <footer class="Final">© 2025 VARAS</footer>
+  
+</body>
+</html>
